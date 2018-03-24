@@ -1,3 +1,19 @@
+'''
+    Authors:
+        - Malav
+        - Chris
+        - Jorge
+        - AJ
+        - Tony
+    Date: 05/05/18
+    Purpose: Final project for advanced python
+        - intention is to create social based
+            website for users to find and store
+            recipes based on available food items
+        - can also check for wine pairings
+'''
+
+
 import os
 from os.path import join, dirname
 # from dotenv import load_dotenv
@@ -13,16 +29,12 @@ import uuid
 app = Flask(__name__, template_folder='static')
 app.config["DEBUG"] = True
 
-
-if __name__ == "__main__":
-    app.run(port=5000)
-
 #Route for /
 @app.route("/")
 def hello():
     return render_template('/index.html')
 
-#Make SQL cursor return dictionary 
+#Make SQL cursor return dictionary
 def dict_factory(cursor, row):
     d = {}
     for idx, col in enumerate(cursor.description):
@@ -129,3 +141,12 @@ def newEvent():
     return jsonify({
         'newEventStatus': True
     })
+
+
+
+def main():
+    app.run(port=5000)
+
+
+if __name__ == "__main__":
+        main()
