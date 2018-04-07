@@ -22,7 +22,12 @@
 ### (window):
   - finding alternatives ..
 ### (ubuntu):
-  - finding alternatives ..
+  - follow [these](https://www.postgresql.org/download/linux/ubuntu/) instructions
+  - then in command line do:
+    - createDb foodDB
+  - once the .sql file is on github, just do:
+    - psql foodDB < db.sql
+  - then the database should be there to connect to and modift
 #### general steps to get database setup:
   - when you clone or pull the repo you should have a <filename>.db file in the directory
   - make sure you have a postgress server, and the server is running.
