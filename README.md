@@ -30,7 +30,8 @@
   - follow [these](https://www.postgresql.org/download/linux/ubuntu/) instructions
   - in our active directory there is a db.sql file
   - make sure your psql server is running, then in terminal type:
-    - ` fooddb < db.sql`
+    - `postgres -D /usr/local/pgsql/data`
+    - `psql fooddb < db.sql`
   - then the database should be created and you can interact with it through the website in localhost
 
 #### general steps to get database setup:
