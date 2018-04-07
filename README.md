@@ -30,7 +30,7 @@
   - follow [these](https://www.postgresql.org/download/linux/ubuntu/) instructions
   - in our active directory there is a db.sql file
   - make sure your psql server is running, then in terminal type:
-    - `psql < db.sql`
+    - ` fooddb < db.sql`
   - then the database should be created and you can interact with it through the website in localhost
 
 #### general steps to get database setup:
@@ -40,5 +40,5 @@
   - dependant on your postgress server installation:
     - you'll have command line commands to import a database table
     - for ex. on mac -> we install the app above and in terminal run:
-      - `psql < db.sql`
+      - `psql fooddb < db.sql`
     - this creates the DB and tables necessary
