@@ -1,10 +1,14 @@
 # Development
 
+## Ask if you need help
+
 ### to setup the environment (through command line):
   - first clone the repository
     - git clone "URL"
   - inside the main directory( adv_py_FinalProj ) run:
     - pip install -r requiredPackages.txt
+      - might need to install a load of stuff including
+        - pip sqlalchemy flask-sqlalchemy postgres flask-wtf
   - then in same directory on command line, type:
     - `. venv/bin/activate`
   - then you can run the project by typing:
@@ -33,6 +37,12 @@
     - `postgres -D /usr/local/pgsql/data`
     - `psql < db.sql`
   - then the database should be created and you can interact with it through the website in localhost
+  - if you get a <username> fatal error or something:
+    - do `sudo su - postgres psql`
+    - in bash: `CREATE DATABASE template1`
+    - then: `CREATE DATABASE <username>`
+    - [permission help](https://dba.stackexchange.com/questions/33285/granting-a-user-account-permission-to-create-databases-in-postgresql)
+
 
 #### general steps to get database setup:
   - when you clone or pull the repo you should have a <filename>.db file in the directory
