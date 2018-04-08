@@ -1,5 +1,7 @@
 # Development
 
+## Ask if you need help
+
 ### to setup the environment (through command line):
   - first clone the repository
     - git clone "URL"
@@ -39,6 +41,7 @@
     - do `sudo su - postgres psql`
     - in bash: `CREATE DATABASE template1`
     - then: `CREATE DATABASE <username>`
+    - [permission help](https://dba.stackexchange.com/questions/33285/granting-a-user-account-permission-to-create-databases-in-postgresql)
 
 
 #### general steps to get database setup:
