@@ -6,7 +6,7 @@
   - inside the main directory( adv_py_FinalProj ) run:
     - pip install -r requiredPackages.txt
   - then in same directory on command line, type:
-    - . venv/bin/activate
+    - `. venv/bin/activate`
   - then you can run the project by typing:
     - python routes.py
 
