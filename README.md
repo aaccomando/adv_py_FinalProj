@@ -12,13 +12,13 @@
       - might need to install a load of stuff including
         - pip sqlalchemy flask-sqlalchemy postgres flask-wtf
   - then in same directory on command line, type:
-    - `. venv/bin/activate`
+    - `source venv/bin/activate`
   - then you can run the project by typing:
     - python routes.py
 
   - to see the project in browser go to:
     - localhost:8000
-      - to change port, go to ~line: 77 and change the var
+      - to change port-> in routes.py, go to main function at bottom
       - make sure to let us know if its changed
 
 ####  Follow the instructions below to integrate the database.
