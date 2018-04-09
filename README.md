@@ -1,5 +1,9 @@
 # Development
 
+# Project Overview
+  coming soon...
+
+
 ## Ask if you need help
 
 ### to setup the environment (through command line):
@@ -19,18 +23,22 @@
       - to change port, go to ~line: 77 and change the var
       - make sure to let us know if its changed
 
+####  Follow the instructions below to integrate the database.
 
-### Postgress (mac):
+### Postgres (mac):
   - [download This](https://postgresapp.com/documentation/all-versions.html)
-  - just do this:
+  - Run this command to add postgres cli commands to the Path environment:
     - `sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
+  - Make sure postgres server is running then in terminal, within the project directory:
+  - run: `psql < db.sql`
+    - This script initiates the database on your machine.
 
-### (window):
+### Postgres (window):
   - [instructions](https://www.postgresql.org/download/windows/) here
   - follow similar instructions as given below for general steps
     - you may have to add psql to your path environment variables
 
-### (ubuntu):
+### Postgres (ubuntu):
   - follow [these](https://www.postgresql.org/download/linux/ubuntu/) instructions
   - in our active directory there is a db.sql file
   - make sure your psql server is running, then in terminal type:
@@ -45,11 +53,16 @@
 
 
 #### general steps to get database setup:
-  - when you clone or pull the repo you should have a <filename>.db file in the directory
+  - when you clone or pull the repo you should have a "db.sql" file in the directory
   - make sure you have a postgres server, and the server is running.
     - Instructions found [here](https://www.postgresql.org/download/)
-  - dependant on your postgress server installation:
+  - dependant on your postgres server installation:
     - you'll have command line commands to import a database table
-    - for ex. on mac -> we install the app above and in terminal run:
+    - for example on mac
+      - we install the app above and when the postgres server is running,
+        go to the project directory and run (in terminal):
       - `psql < db.sql`
-    - this creates the DB and tables necessary
+    - the server should now have a database called "fooddb"
+      - this is where we are reading and writing our users information
+      - soon to have multiple tables to incorportate more advanced
+       features on the front end
