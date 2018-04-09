@@ -1,10 +1,8 @@
-# Development
-
 # Project Overview
   coming soon...
 
-
-## Ask if you need help
+# Development
+  - Ask if you need help setting up the environment
 
 ### to setup the environment (through command line):
   - first clone the repository
