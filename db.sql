@@ -1,7 +1,8 @@
 CREATE DATABASE fooddb;
+
 \connect fooddb;
 
-CREATE TABLE users(
+CREATE TABLE users (
     uid serial PRIMARY KEY,
     firstname VARCHAR(100) NOT NULL,
     lastname VARCHAR(100) NOT NULL,
@@ -9,6 +10,6 @@ CREATE TABLE users(
     pwdhash VARCHAR(100) NOT NULL
 );
 
--- INSERT INTO users (firstname, lastname, email, pwdhash) VALUES (
---     'Malav', 'Patel', 'malavpatel@gmail.com', 'malavpatel'
--- );
+INSERT INTO users (firstname, lastname, email, pwdhash) VALUES
+('Malav', 'Patel', 'malavpatel@gmail.com', 'malavpatel'),
+('Chris', 'Salgado', 'chrissalgado@gmail.com', 'chrissalgado');
