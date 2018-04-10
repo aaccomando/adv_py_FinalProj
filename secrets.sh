@@ -1,0 +1,2 @@
+export EDAMAM_ID="10c14d98"
+export EDAMAM_KEY="86d7e3941b844f481d623c56ffab1c03"
