@@ -1,15 +1,25 @@
 CREATE DATABASE fooddb;
 
 \connect fooddb;
-
+--
 CREATE TABLE users (
-    uid serial PRIMARY KEY,
-    firstname VARCHAR(100) NOT NULL,
-    lastname VARCHAR(100) NOT NULL,
-    email VARCHAR(100) NOT NULL UNIQUE,
-    pwdhash VARCHAR(100) NOT NULL
+    uid SERIAL PRIMARY KEY,
+    firstname TEXT NOT NULL,
+    lastname TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    pwdhash TEXT NOT NULL
 );
 
-INSERT INTO users (firstname, lastname, email, pwdhash) VALUES
-('Malav', 'Patel', 'malavpatel@gmail.com', 'malavpatel'),
-('Chris', 'Salgado', 'chrissalgado@gmail.com', 'chrissalgado');
+CREATE TABLE recipes (
+    recipe_id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    image TEXT NOT NULL,
+    url TEXT NOT NULL,
+    ingredients JSON NOT NULL
+);
+
+CREATE TABLE user_recipes (
+    user_recipe_id SERIAL PRIMARY KEY,
+    user_id INT REFERENCES users(uid),
+    recipe_id INT REFERENCES recipes(recipe_id)
+);
