@@ -1,18 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet'>
     <link href="{{ url_for('static', filename='css/main.css') }}" rel="stylesheet">
+    <title>{% block title %} {% endblock %}</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1 class="title">Learning Flask</h1>
-        </div>
+        <a href="{{ url_for('index') }} " class="btn-secondary glyphicon glyphicon-home"></a>
+        <a href="{{ url_for('home') }}" class="btn-secondary">Dashboard</a>
+        <a href="{{ url_for('account') }}" class="btn-secondary">Account</a>
+
+        {% if 'email' in session %}
+            <a href="{{ url_for('logout') }}" class="btn-secondary">Log Out</a>
+        {% else %}
+            <a href="{{ url_for('login') }}" class="btn-secondary">Log In</a>
+        {% endif %}
     </header>
 
     {% block content %}
     {% endblock %}
+
+
+    <footer>
+        Copyright &copy; 2018, Recipe Finder. All rights reserved.
+    </footer>
 
 </body>
 </html>
