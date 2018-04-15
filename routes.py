@@ -1,6 +1,6 @@
-from flask import Flask, render_template, request, session, redirect, url_for
-from models import db, User
-from forms import SignupForm, LoginForm
+from flask import Flask, render_template, request, session, redirect, url_for, flash
+from models import db, User, Recipe, User_Recipe
+from forms import SignupForm, LoginForm, IngredientForm
 
 app = Flask(__name__)
 
@@ -10,6 +10,7 @@ db.init_app(app)
 app.secret_key = "development-key"
 
 @app.route("/")
+@app.route("/index")
 def index():
     return render_template("index.html")
 
@@ -72,7 +73,35 @@ def home():
     if 'email' not in session:
         return redirect(url_for('login'))
 
-    return render_template("home.html")
+    form = IngredientForm()
+
+    recipe_list = []
+
+    if request.method == 'POST':
+        if form.validate() == False:
+            return render_template('home.html', form=form)
+        else:
+            ingredient = form.ingredient.data
+
+            r = Recipe()
+            recipe_list = r.query(ingredient)
+
+            return render_template('home.html', form=form, recipe_list=recipe_list)
+
+    elif request.method == 'GET':
+        return render_template("home.html", form=form, recipe_list=recipe_list)
+
+@app.route("/account")
+def account():
+    if 'email' not in session:
+        return redirect(url_for('login'))
+
+    users = db.session.query(User).filter(User.email == session['email']).one()
+    return render_template("account.html", users=users)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
