@@ -92,8 +92,18 @@ a {
  */
 
 header {
-  background-color: #fff;
-  padding: 25px 0;
+  background-color: #F8F8F8;
+  padding: 10px 10px 10px 10px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    /* background-color: grey; */
+    /* color: white; */
+    text-align: right;
 }
 
 .title {
