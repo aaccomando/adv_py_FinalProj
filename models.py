@@ -65,7 +65,7 @@ class Recipe(db.Model):
             recipe_list.append(d)
 
         return recipe_list[:5]
-
+        
 class User_Recipe(db.Model):
     __tablename__ = "user_recipes"
 
