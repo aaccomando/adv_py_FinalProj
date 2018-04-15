@@ -14,8 +14,8 @@ CREATE TABLE recipes (
     recipe_id SERIAL PRIMARY KEY,
     name TEXT NOT NULL,
     image TEXT NOT NULL,
-    url TEXT NOT NULL,
-    ingredients JSON NOT NULL
+    ingredients JSON NOT NULL,
+    url TEXT NOT NULL
 );
 
 CREATE TABLE user_recipes (
