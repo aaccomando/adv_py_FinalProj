@@ -2,6 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
+__pycache__/models.cpython-36.pyc
+__pycache__/forms.cpython-36.pyc
+
 
 # C extensions
 *.so

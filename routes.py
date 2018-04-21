@@ -91,6 +91,7 @@ def home():
     elif request.method == 'GET':
         return render_template("home.html", form=form, recipe_list=recipe_list)
 
+
 @app.route("/account")
 def account():
     if 'email' not in session:

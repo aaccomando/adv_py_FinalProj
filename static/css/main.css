@@ -143,11 +143,14 @@ footer {
 
 /*
  * Hero section
- */
-
+*/
 .hero-section .section-content {
   position: relative;
   top: 100px;
+}
+
+.hero-section {
+  margin-top: 20px;
 }
 
 .hero-section .section-content h2 {
