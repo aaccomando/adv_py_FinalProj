@@ -1,16 +1,11 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block title %} 404 {% endblock %} {% block content %}
+<main class="about-section">
+  <div class="container">
+    <h1>Oops!</h1>
 
-{% block title %} 404 {% endblock %}
-
-{% block content %}
-    <main class="about-section">
-        <div class="container">
-            <h1>Oops!</h1>
-
-            <p>This page might have been moved or doesn't exists!
-                Click <a href="{{ url_for('home') }}"> here </a> to go to dashboard.
-            </p>
-        </div>
-    </main>
+    <p>This page might have been moved or doesn't exists! Click <a href="{{ url_for('home') }}"> here </a> to go to dashboard.
+    </p>
+  </div>
+</main>
 
 {% endblock %}

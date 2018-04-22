@@ -1,5 +1,10 @@
 {% extends "layout.html" %} {% block title %} Home {% endblock %}
 
+<style>
+  .hero-section {
+    margin-top: 60px;
+  }
+</style>
 
 <link href="{{ url_for('static', filename='js/main.js') }}" /> {% block content %}
 <main class="hero-section">
@@ -22,6 +27,8 @@
           <div class="row">
             <div class="">
               {% for recipe in recipe_list %}
+
+              <button type="submit" onclick="{{ storeFav }}">Bookmark</button>
 
               <h3>{{ recipe['name'] }}</h3>
               <img src="{{ recipe['image'] }}"> {% for ingredient in recipe['ingredients'] %}
