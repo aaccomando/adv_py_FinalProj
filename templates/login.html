@@ -1,27 +1,50 @@
-{% extends "layout.html" %} {% block title %} User Login {% endblock %} {% block content %}
-<main class="container signup-section">
-  <div class="section-content">
+<div class="background">
+  {% extends "layout.html" %} {% block title %} User Login {% endblock %} {% block content %}
+  <style>
+    .background {
+      margin-top: 50px;
+      background-image: url("static/img/background1.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
 
-    <h2>Log in</h2>
+    .section-content {
+      margin-top: 50px;
+      background-color: white;
+      padding: 40px;
+      border: 3px;
+      border-radius: 5px;
+      border-color: red;
+      opacity: .86;
+    }
+  </style>
 
-    <form method="POST" action="/login">
-      {{ form.hidden_tag() }}
 
-      <div class="form-group">
-        {{ form.email.label }} {% if form.email.errors %} {% for error in form.email.errors %}
-        <p class="error-message">{{ error }}</p>
-        {% endfor %} {% endif %} {{ form.email }}
-      </div>
+  <main class="container signup-section">
+    <div class="section-content">
+      <h2>Log in</h2>
 
-      <div class="form-group">
-        {{ form.password.label }} {% if form.password.errors %} {% for error in form.password.errors %}
-        <p class="error-message">{{ error }}</p>
-        {% endfor %} {% endif %} {{ form.password }}
-      </div>
+      <form method="POST" action="/login">
+        {{ form.hidden_tag() }}
 
-      {{ form.submit(class="btn-primary") }}
-    </form>
+        <div class="form-group">
+          {{ form.email.label }} {% if form.email.errors %} {% for error in form.email.errors %}
+          <p class="error-message">{{ error }}</p>
+          {% endfor %} {% endif %} {{ form.email }}
+        </div>
 
-  </div>
-</main>
-{% endblock %}
+        <div class="form-group">
+          {{ form.password.label }} {% if form.password.errors %} {% for error in form.password.errors %}
+          <p class="error-message">{{ error }}</p>
+          {% endfor %} {% endif %} {{ form.password }}
+        </div>
+
+        {{ form.submit(class="btn-primary") }}
+        <a href="{{ url_for('signup') }}" style="padding-left:35px"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+      </form>
+    </div>
+  </main>
+  {% endblock %}
+</div>
