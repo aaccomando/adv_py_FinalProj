@@ -55,7 +55,6 @@ class Recipe(db.Model):
             ingredients = recipe["recipe"]["ingredientLines"]
             url = recipe["recipe"]["url"]
 
-
             d = {
                 "name": name,
                 "image": image,
@@ -65,7 +64,7 @@ class Recipe(db.Model):
             recipe_list.append(d)
 
         return recipe_list[:5]
-        
+
 class User_Recipe(db.Model):
     __tablename__ = "user_recipes"
 

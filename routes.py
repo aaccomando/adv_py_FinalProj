@@ -85,6 +85,7 @@ def home():
 
             r = Recipe()
             recipe_list = r.query(ingredient)
+            
 
             return render_template('home.html', form=form, recipe_list=recipe_list)
 
