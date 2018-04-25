@@ -4,13 +4,12 @@
   ![alt tag](static/img/homepage.png)
 
 # Development
-  - Ask if you need help setting up the environment
 
 ### to setup the environment (through command line):
   - first clone the repository
-    - git clone "URL"
+    - git clone "URL-HERE"
   - inside the main directory( adv_py_FinalProj ) run:
-    - pip install -r requiredPackages.txt
+    - pip install -r requirements.txt
       - might need to install a load of stuff including
         - pip sqlalchemy flask-sqlalchemy postgres flask-wtf
   - then in same directory on command line, type:
@@ -21,7 +20,6 @@
   - to see the project in browser go to:
     - localhost:8000
       - to change port-> in routes.py, go to main function at bottom
-      - make sure to let us know if its changed
 
 ####  Follow the instructions below to integrate the database.
 
