@@ -5,6 +5,7 @@ __pycache__/
 *$py.class
 /__pycache__/models.cpython-36.pyc
 /__pycache__/forms.cpython-36.pyc
+.DS_Store
 
 # Flask stuff:
 instance/
