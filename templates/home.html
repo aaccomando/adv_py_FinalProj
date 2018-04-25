@@ -1,52 +1,98 @@
-{% extends "layout.html" %} {% block title %} Home {% endblock %}
+<div class=background>
 
-<style>
-  .hero-section {
-    margin-top: 60px;
-  }
-</style>
+  <style>
+    .hero-section {
+      margin-top: 60px;
+    }
 
-<link href="{{ url_for('static', filename='js/main.js') }}" /> {% block content %}
-<main class="hero-section">
-  <div class="container">
-    <div class="section">
-      <div class="nav">
-        <form method="POST" action="/home">
-          {{ form.hidden_tag() }}
+    .background {
+      margin-top: 20px;
+      background-color: #464646;
+      background-image: url("static/img/background5.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+      background-attachment: fixed;
+      height: 100%;
+      overflow: scroll;
+    }
 
-          <div class="form-group">
-            {% if form.ingredient.errors %} {% for error in form.ingredient.errors %}
-            <p class="error-message">{{ error }}</p>
-            {% endfor %} {% endif %} {{ form.ingredient(placeholder="Explore recipes") }}
-          </div>
+    .btn-primary {
+      background: #4285f4;
+      border: 1px solid #1266f1;
+      color: #ffffff;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.23px;
+      padding: 12px 32px;
+      text-align: center;
+      text-transform: uppercase;
+      box-shadow: 2px 5px 10px 2px #000;
+    }
 
-          {{ form.submit(class="btn-primary") }}
-        </form>
+    input::placeholder {
+      color: black;
+      font-size: 22px;
+      font-weight: bold;
+      font-style: italic;
+      text-align: center;
+    }
 
-        <div class="container-fluid">
-          <div class="row">
-            <div class="">
-              {% for recipe in recipe_list %}
+    .row {
+      background-color: white;
+      width: 90%;
+      opacity: .9;
+    }
 
-              <button type="submit" onclick="{{ storeFav }}">Bookmark</button>
+    .entry {
+      background-color: white;
+      opacity: 1;
+      float: left;
+      display: inline;
+    }
+  </style>
 
-              <h3>{{ recipe['name'] }}</h3>
-              <img src="{{ recipe['image'] }}"> {% for ingredient in recipe['ingredients'] %}
-              <ul>{{ ingredient }}</ul>
-              {% endfor %}
+  {% extends "layout.html" %} {% block title %} Home {% endblock %}
 
-              <p>For preparation: click <a href="{{ recipe['url'] }}">instructions</a></p>
-              <hr> {% endfor %}
+  <link href="{{ url_for('static', filename='js/main.js') }}" /> {% block content %}
+  <main class="hero-section">
+    <div class="container">
+      <div class="section">
+        <div class="nav">
+          <form method="POST" action="/home">
+            {{ form.hidden_tag() }}
+
+            <div class="form-group">
+              {% if form.ingredient.errors %} {% for error in form.ingredient.errors %}
+              <p class="error-message">{{ error }}</p>
+              {% endfor %} {% endif %} {{ form.ingredient(placeholder="Explore recipes") }}
             </div>
 
+            {{ form.submit(class="btn-primary") }}
+          </form>
+
+          <div class="container-fluid">
+            <div class="row">
+              {% for recipe in recipe_list %}
+              <div class="entry">
+                <button type="submit" onclick="alert('This recipe has been saved!')">Bookmark</button>
+
+                <h3>{{ recipe['name'] }}</h3>
+                <img src="{{ recipe['image'] }}">
+
+                <p>For preparation: click <a href="{{ recipe['url'] }}">instructions</a></p>
+                <hr> {% endfor %}
+
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="clearfix"></div>
     </div>
-
-    <div class="clearfix"></div>
-  </div>
-</main>
+  </main>
 
 
-{% endblock %}
+  {% endblock %}
