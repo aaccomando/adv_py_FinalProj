@@ -37,8 +37,9 @@
             <li class=""><a href="{{ url_for('about') }}">About</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
+            {% if 'email' not in session %}
             <li><a href="{{ url_for('signup') }}"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-            {% if 'email' in session %}
+            {% endif %} {% if 'email' in session %}
             <li><a href="{{ url_for('logout') }}">Log Out</a></li>
             {% else %}
             <li><a href="{{ url_for('login') }}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
