@@ -1,5 +1,7 @@
 # Project Overview
-  coming soon...
+  Website that allows a user to search by ingredients!
+
+  ![alt tag](static/img/homepage.png)
 
 # Development
   - Ask if you need help setting up the environment
