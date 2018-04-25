@@ -15,5 +15,5 @@ class LoginForm(Form):
     submit = SubmitField("Sign in")
 
 class IngredientForm(Form):
-    ingredient = StringField('Ingredient', validators=[DataRequired("Please enter an ingredients.")])
+    ingredient = StringField('Ingredient', validators=[DataRequired("Please enter your ingredients.")])
     submit = SubmitField("Search")
