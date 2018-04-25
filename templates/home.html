@@ -33,10 +33,11 @@
 
     input::placeholder {
       color: black;
-      font-size: 22px;
+      font-size: 23px;
       font-weight: bold;
       font-style: italic;
       text-align: center;
+      background-color: #ffffff;
     }
 
     .row {
@@ -47,7 +48,7 @@
 
     .entry {
       background-color: white;
-      opacity: 1;
+
       float: left;
       display: inline;
     }
@@ -66,7 +67,7 @@
             <div class="form-group">
               {% if form.ingredient.errors %} {% for error in form.ingredient.errors %}
               <p class="error-message">{{ error }}</p>
-              {% endfor %} {% endif %} {{ form.ingredient(placeholder="Explore recipes") }}
+              {% endfor %} {% endif %} {{ form.ingredient(placeholder="Enter ingredients separated by commas") }}
             </div>
 
             {{ form.submit(class="btn-primary") }}
