@@ -69,6 +69,7 @@ a {
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  box-shadow: 2px 5px 10px 2px #000;
 }
 
 .btn-secondary {
@@ -186,6 +187,7 @@ footer {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .form-group input {
@@ -196,6 +198,7 @@ footer {
   font-size: 18px;
   padding: 5px 0;
   width: 100%;
+  text-align: center;
 }
 
 .form-group input:focus {
@@ -227,75 +230,4 @@ footer {
 
 .about-section p {
   font-size: 16px;
-}
-
-
-/*
- * Home
- */
-
-.section-tabs {
-  float: left;
-  width: 340px;
-}
-
-.section-tabs .places {
-  margin-top: 62px;
-  padding-right: 20px;
-}
-
-.section-tabs .places a,
-.section-tabs .places a:visited {
-  color: #3372df;
-}
-
-
-.section-tabs article {
-  margin-bottom: 20px;
-}
-
-.section-tabs article .name {
-  font-size: 18px;
-}
-
-.section-tabs article .walking-distance {
-  color: #6e6e6e;
-  font-size: 13px;
-  margin: 0;
-}
-
-.section-map {
-  float: right;
-  width: 660px;
-}
-
-.section-map .nav {
-  padding: 20px 0;
-}
-
-.section-map .form-group {
-  display: inline;
-}
-
-.section-map #address {
-  font-size: 14px;
-  margin-right: 10px;
-  width: 87%;
-}
-
-.section-map #submit {
-  font-size: 10px;
-  padding: 5px 15px;
-}
-
-#map {
-  height: 500px;
-}
-
-.leaflet-popup-content h3 {
-  margin: 0;
-}
-
-.leaflet-popup-content p {
-  margin: 10px 0 ;
 }
