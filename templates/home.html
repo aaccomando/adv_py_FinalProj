@@ -56,8 +56,8 @@
     .item2 {
       float: right;
       width: 50%;
-      padding-top: 100px;
-      vertical-align: middle;
+      margin-top: 55px;
+
     }
   </style>
 
@@ -89,7 +89,7 @@
               <img src="{{ recipe['image'] }}">
               <p>For preparation: click <a href="{{ recipe['url'] }}">instructions</a></p>
             </div>
-            <div clas="item2">
+            <div class="item2">
               {% for i in recipe['ingredients'] %}
               <p>
                 {{ i }}
