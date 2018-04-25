@@ -2,10 +2,13 @@
 
   <style>
     .background {
-      margin-top: 50px;
+      margin-top: 20px;
+      background-color: #464646;
       background-image: url("static/img/background2.jpg");
       background-repeat: no-repeat;
+      background-position: center center;
       background-size: 100%;
+      background-attachment: fixed;
       height: 100%;
       overflow: scroll;
     }
@@ -21,7 +24,6 @@
       box-shadow: 3px 6px 12px 5px #000;
     }
   </style>
-
 
   {% extends "layout.html" %} {% block title %} User Signup {% endblock %} {% block content %}
   <main class="container signup-section">
