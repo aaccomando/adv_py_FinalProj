@@ -1,33 +1,45 @@
-{% extends "layout.html" %} {% block title %} About {% endblock %} {% block content %}
+<div class="background">
+  {% extends "layout.html" %} {% block title %} About {% endblock %} {% block content %}
 
-<style>
-  .about-section {
-    margin-top: 60px;
-    font-family: "Georgia";
-  }
-  div.about {
-    font-family: "Georgia";
-    width: auto;
-    max-width: 500px;
-  }
-</style>
-<main class="about-section">
-  <div class="container">
+  <style>
+    .about-section {
+      margin-top: 60px;
+      font-family: "Georgia";
+    }
 
-    <h2>About Recipe Finder</h2>
-    <hr>
-    <div class = "about"> Recipe Finder is the final project for the Advanced Python(CIS4930).
-        It is a multiuser, web application that uses the Edamam API for recipes and nutrition information.
-        With Recipe Finder users can perform personalized searches for the ingredients they have available and they are shown a list of all possible recipies with these ingredients.
+    div.about {
+      font-family: "Georgia";
+      width: auto;
+      max-width: 500px;
+    }
+
+    .background {
+      margin-top: 30px;
+      background-color: white;
+      background-image: url("static/img/background7.jpg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100%;
+      background-attachment: fixed;
+      height: 100%;
+      overflow: scroll;
+    }
+  </style>
+  <main class="about-section">
+    <div class="container">
+
+      <h2>About Recipe Finder</h2>
+      <p>
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+      </p>
+      <div class="about"> Recipe Finder is the final project for the Advanced Python(CIS4930). It is a multiuser, web application that uses the Edamam API for recipes and nutrition information. With Recipe Finder users can perform personalized searches for the ingredients
+        they have available and they are shown a list of all possible recipies with these ingredients.
         <br> <br>
-        <p><h4>The Recipe Finder Team:</h4>
-        Anthony Accomando<br>
-        Jorge Medrano<br>
-        Malavkumar Patel<br>
-        Christopher Salgado<br>
-        Akshat Shah</p>
-    </div>
+        <p>
+          <h4>The Recipe Finder Team:</h4> Anthony Accomando<br> Jorge Medrano<br> Malavkumar Patel<br> Christopher Salgado<br> Akshat Shah</p>
+      </div>
 
-  </div>
-</main>
-{% endblock %}
+    </div>
+  </main>
+  {% endblock %}
+</div>
