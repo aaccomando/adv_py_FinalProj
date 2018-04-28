@@ -4,7 +4,7 @@ from forms import SignupForm, LoginForm, IngredientForm
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/fooddb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://mmdozfsrznjkcf:f6e25e48715d3c098e20ac295f75df32e05f0ef6c4f96b8eed824b48ca3c85ff@ec2-54-225-200-15.compute-1.amazonaws.com:5432/dfccl0em0f09cm'
 db.init_app(app)
 
 app.secret_key = "development-key"
